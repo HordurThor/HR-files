@@ -1,0 +1,42 @@
+
+testing hash map
+THIS IS THE DATA FOR KEY: 345
+None
+THIS IS THE DATA FOR KEY: key_value:345
+2
+THIS IS THE NEW DATA FOR KEY: 345
+2
+
+testing prefix tree
+This is the statement: - 12 + 4 5
+This is the result: 3
+This is the statement: + 12 + - 21 5 5
+This is the result: 33
+This is the statement: + 4 + - 4 6 - 9 8
+This is the result: 3
+This is the statement: - + - + 6 9 8 + 1 + 5 5 - - + 6 7 - 9 8 - + 9 6 1
+This is the result: 20
+This is the statement: + + 8 4 - + - 3 3 2 - + 7 8 9
+This is the result: 8
+
+testing remove_subtree
+2 3 4 5 6 7 8 9 10
+bst size: 9
+remove_subtree 3
+5 6 7 8 9 10
+bst size: 6
+2 3 4 5 6 7 8 9 10
+bst size: 9
+remove_subtree 6
+2 3 4 5 7 8 9 10
+bst size: 8
+2 3 4 5 6 7 8 9 10
+bst size: 9
+remove_subtree 10
+2 3 4 5 6 7
+bst size: 6
+2 3 4 5 6 7 8 9 10
+bst size: 9
+remove_subtree 7
+2 3 4 5
+bst size: 4

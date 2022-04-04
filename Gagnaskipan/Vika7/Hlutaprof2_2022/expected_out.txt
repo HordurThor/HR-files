@@ -1,0 +1,36 @@
+
+Testing DLL_ORDERED
+dl: 12 17 23 34 45 45 56 89
+dl: 10 12 17 22 22 23 23 23 34 45 45 45 56 71 89 98
+
+Testing RANGE
+range(23, 45): 23 23 23 34 45 45 45
+range(0, 100): 10 12 17 22 22 23 23 23 34 45 45 45 56 71 89 98
+range(45, 45): 45 45 45
+range(17, 89): 17 22 22 23 23 23 34 45 45 45 56 71 89
+range(10, 98): 10 12 17 22 22 23 23 23 34 45 45 45 56 71 89 98
+range(54, 76): 56 71
+range(20, 60): 22 22 23 23 23 34 45 45 45 56
+
+Testing is_value_higher_than_average
+True
+False
+False
+True
+True
+False
+
+Testing is_sublist
+True
+True
+True
+True
+
+False
+False
+False
+False
+
+True
+True
+False
