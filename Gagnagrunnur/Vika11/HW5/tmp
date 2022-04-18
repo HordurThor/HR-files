@@ -1,0 +1,462 @@
+
+SELECT 'Customers: CID --> CN' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CID
+    FROM Customers R
+    GROUP BY R.CID
+    HAVING COUNT(DISTINCT R.CN) > 1
+) X;
+
+
+SELECT 'Customers: CID --> CS' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CID
+    FROM Customers R
+    GROUP BY R.CID
+    HAVING COUNT(DISTINCT R.CS) > 1
+) X;
+
+
+SELECT 'Customers: CID --> CNr' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CID
+    FROM Customers R
+    GROUP BY R.CID
+    HAVING COUNT(DISTINCT R.CNr) > 1
+) X;
+
+
+SELECT 'Customers: CID --> CZ' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CID
+    FROM Customers R
+    GROUP BY R.CID
+    HAVING COUNT(DISTINCT R.CZ) > 1
+) X;
+
+
+SELECT 'Customers: CID --> CC' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CID
+    FROM Customers R
+    GROUP BY R.CID
+    HAVING COUNT(DISTINCT R.CC) > 1
+) X;
+
+
+SELECT 'Customers: CID --> EID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CID
+    FROM Customers R
+    GROUP BY R.CID
+    HAVING COUNT(DISTINCT R.EID) > 1
+) X;
+
+
+SELECT 'Customers: CN --> CID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CN
+    FROM Customers R
+    GROUP BY R.CN
+    HAVING COUNT(DISTINCT R.CID) > 1
+) X;
+
+
+SELECT 'Customers: CN --> CS' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CN
+    FROM Customers R
+    GROUP BY R.CN
+    HAVING COUNT(DISTINCT R.CS) > 1
+) X;
+
+
+SELECT 'Customers: CN --> CNr' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CN
+    FROM Customers R
+    GROUP BY R.CN
+    HAVING COUNT(DISTINCT R.CNr) > 1
+) X;
+
+
+SELECT 'Customers: CN --> CZ' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CN
+    FROM Customers R
+    GROUP BY R.CN
+    HAVING COUNT(DISTINCT R.CZ) > 1
+) X;
+
+
+SELECT 'Customers: CN --> CC' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CN
+    FROM Customers R
+    GROUP BY R.CN
+    HAVING COUNT(DISTINCT R.CC) > 1
+) X;
+
+
+SELECT 'Customers: CN --> EID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CN
+    FROM Customers R
+    GROUP BY R.CN
+    HAVING COUNT(DISTINCT R.EID) > 1
+) X;
+
+
+SELECT 'Customers: CS --> CID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CS
+    FROM Customers R
+    GROUP BY R.CS
+    HAVING COUNT(DISTINCT R.CID) > 1
+) X;
+
+
+SELECT 'Customers: CS --> CN' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CS
+    FROM Customers R
+    GROUP BY R.CS
+    HAVING COUNT(DISTINCT R.CN) > 1
+) X;
+
+
+SELECT 'Customers: CS --> CNr' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CS
+    FROM Customers R
+    GROUP BY R.CS
+    HAVING COUNT(DISTINCT R.CNr) > 1
+) X;
+
+
+SELECT 'Customers: CS --> CZ' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CS
+    FROM Customers R
+    GROUP BY R.CS
+    HAVING COUNT(DISTINCT R.CZ) > 1
+) X;
+
+
+SELECT 'Customers: CS --> CC' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CS
+    FROM Customers R
+    GROUP BY R.CS
+    HAVING COUNT(DISTINCT R.CC) > 1
+) X;
+
+
+SELECT 'Customers: CS --> EID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CS
+    FROM Customers R
+    GROUP BY R.CS
+    HAVING COUNT(DISTINCT R.EID) > 1
+) X;
+
+
+SELECT 'Customers: CNr --> CID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CNr
+    FROM Customers R
+    GROUP BY R.CNr
+    HAVING COUNT(DISTINCT R.CID) > 1
+) X;
+
+
+SELECT 'Customers: CNr --> CN' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CNr
+    FROM Customers R
+    GROUP BY R.CNr
+    HAVING COUNT(DISTINCT R.CN) > 1
+) X;
+
+
+SELECT 'Customers: CNr --> CS' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CNr
+    FROM Customers R
+    GROUP BY R.CNr
+    HAVING COUNT(DISTINCT R.CS) > 1
+) X;
+
+
+SELECT 'Customers: CNr --> CZ' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CNr
+    FROM Customers R
+    GROUP BY R.CNr
+    HAVING COUNT(DISTINCT R.CZ) > 1
+) X;
+
+
+SELECT 'Customers: CNr --> CC' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CNr
+    FROM Customers R
+    GROUP BY R.CNr
+    HAVING COUNT(DISTINCT R.CC) > 1
+) X;
+
+
+SELECT 'Customers: CNr --> EID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CNr
+    FROM Customers R
+    GROUP BY R.CNr
+    HAVING COUNT(DISTINCT R.EID) > 1
+) X;
+
+
+SELECT 'Customers: CZ --> CID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CZ
+    FROM Customers R
+    GROUP BY R.CZ
+    HAVING COUNT(DISTINCT R.CID) > 1
+) X;
+
+
+SELECT 'Customers: CZ --> CN' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CZ
+    FROM Customers R
+    GROUP BY R.CZ
+    HAVING COUNT(DISTINCT R.CN) > 1
+) X;
+
+
+SELECT 'Customers: CZ --> CS' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CZ
+    FROM Customers R
+    GROUP BY R.CZ
+    HAVING COUNT(DISTINCT R.CS) > 1
+) X;
+
+
+SELECT 'Customers: CZ --> CNr' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CZ
+    FROM Customers R
+    GROUP BY R.CZ
+    HAVING COUNT(DISTINCT R.CNr) > 1
+) X;
+
+
+SELECT 'Customers: CZ --> CC' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CZ
+    FROM Customers R
+    GROUP BY R.CZ
+    HAVING COUNT(DISTINCT R.CC) > 1
+) X;
+
+
+SELECT 'Customers: CZ --> EID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CZ
+    FROM Customers R
+    GROUP BY R.CZ
+    HAVING COUNT(DISTINCT R.EID) > 1
+) X;
+
+
+SELECT 'Customers: CC --> CID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CC
+    FROM Customers R
+    GROUP BY R.CC
+    HAVING COUNT(DISTINCT R.CID) > 1
+) X;
+
+
+SELECT 'Customers: CC --> CN' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CC
+    FROM Customers R
+    GROUP BY R.CC
+    HAVING COUNT(DISTINCT R.CN) > 1
+) X;
+
+
+SELECT 'Customers: CC --> CS' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CC
+    FROM Customers R
+    GROUP BY R.CC
+    HAVING COUNT(DISTINCT R.CS) > 1
+) X;
+
+
+SELECT 'Customers: CC --> CNr' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CC
+    FROM Customers R
+    GROUP BY R.CC
+    HAVING COUNT(DISTINCT R.CNr) > 1
+) X;
+
+
+SELECT 'Customers: CC --> CZ' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CC
+    FROM Customers R
+    GROUP BY R.CC
+    HAVING COUNT(DISTINCT R.CZ) > 1
+) X;
+
+
+SELECT 'Customers: CC --> EID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.CC
+    FROM Customers R
+    GROUP BY R.CC
+    HAVING COUNT(DISTINCT R.EID) > 1
+) X;
+
+
+SELECT 'Customers: EID --> CID' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.EID
+    FROM Customers R
+    GROUP BY R.EID
+    HAVING COUNT(DISTINCT R.CID) > 1
+) X;
+
+
+SELECT 'Customers: EID --> CN' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.EID
+    FROM Customers R
+    GROUP BY R.EID
+    HAVING COUNT(DISTINCT R.CN) > 1
+) X;
+
+
+SELECT 'Customers: EID --> CS' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.EID
+    FROM Customers R
+    GROUP BY R.EID
+    HAVING COUNT(DISTINCT R.CS) > 1
+) X;
+
+
+SELECT 'Customers: EID --> CNr' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.EID
+    FROM Customers R
+    GROUP BY R.EID
+    HAVING COUNT(DISTINCT R.CNr) > 1
+) X;
+
+
+SELECT 'Customers: EID --> CZ' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.EID
+    FROM Customers R
+    GROUP BY R.EID
+    HAVING COUNT(DISTINCT R.CZ) > 1
+) X;
+
+
+SELECT 'Customers: EID --> CC' AS FD,
+CASE WHEN COUNT(*)=0 THEN 'MAY HOLD'
+ELSE 'does not hold' END AS VALIDITY
+FROM (
+    SELECT R.EID
+    FROM Customers R
+    GROUP BY R.EID
+    HAVING COUNT(DISTINCT R.CC) > 1
+) X;
+

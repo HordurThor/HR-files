@@ -1,0 +1,40 @@
+Rentals: PID --> PN	
+Rentals: HID --> HS	
+Rentals: HID --> HZ	
+Rentals: HZ --> HC	
+
+Boats: Z --> BL	
+Boats: Z --> T	
+
+Projects: ID --> MID	
+Projects: ID --> MN	
+Projects: PID --> PN	
+Projects: SID --> SN	
+Projects: MID --> MN	
+
+Coffees: DID --> DN	
+Coffees: DID --> DS	
+Coffees: CID --> CN	
+Coffees: CID --> CM	
+
+Customers: CID --> CN	
+Customers: CID --> CS	
+Customers: CID --> CNr
+Customers: CID --> CZ	
+Customers: CID --> EID	
+Customers: CZ --> CC	
+
+People(PID, PN, BY, S) BCNF
+Zip(HZ, HC) BCNF
+Rentals(HID, PID, HS, HZ) BCNF
+
+Boats(Z, BL, BNo, BN, SSN) BCNF
+
+Companies(CID, CN) BCNF
+Manengers(MID, MN)
+Projects(PID, MID, SID, PN) BCNF
+
+Customers(CID, CNR, CZ, EID) BCNF
+Coffees(CID, HID, DID, CN, CM) BCNF
+
+

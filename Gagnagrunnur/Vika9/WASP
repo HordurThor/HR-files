@@ -1,0 +1,92 @@
+drop table if exists Member;
+drop table if exists Sponsor;
+drop table if exists Linking;
+drop table if exists People;
+drop table if exists Party;
+drop table if exists Enemy;
+drop table if exists Asset;
+
+CREATE TABLE Member (
+	Start_date varchar(50),
+	MemberID integer primary key
+);
+
+CREATE TABLE Grant( /*Þurfum annan trigger fyrir ef date og member er það sama og nýr grant. Þá er það ekki hægt, ehv svoleðis */
+	/* semsagt, ekki hægt fyrir member að hafa tvo grants á sama degi */
+	SponsorID integer,
+	MemberID integer,
+	
+	Date varchar(255),
+	Amount integer,
+	Payback integer,
+	Date_reviewed varchar(255), /* trigger stuff?? */
+	Review_grade varchar(10), /* float??? */
+	primary key(SponsorID, MemberID, Date),
+	foreign key(SponsorID) references Sponsor(ID),
+	foreign key(MemberID) references Member(MemberID),
+);
+
+CREATE TABLE Sponsor (
+	ID integer primary key,
+	Name varchar(255),
+	Address varchar(255),
+	Industry varchar(255)
+);
+
+CREATE TABLE Linking (
+	ID integer primary key,
+	Name varchar(255),
+	Type varchar(255),
+	Description varchar(255)
+);
+
+CREATE TABLE People (
+	ID integer primary key,
+	Name varchar(255),
+	Address varchar(255),
+	Phone varchar(255),
+	DOB varchar(255),
+	DOD varchar(255)
+);
+
+CREATE TABLE Party (
+	ID integer primary key,
+	Country varchar(255),
+	Name varchar(255),
+	Monitoring_start_date varchar(255) primary key,
+	Monitoring_end_date varchar(255),
+	
+	foreign key(Monitoring_start_date) references Member(MemberID)
+);
+
+CREATE TABLE Enemy (
+	Reason varchar(255)
+);
+
+CREATE TABLE Opponent(
+	ID integer primary key
+);
+
+CREATE TABLE Role(
+	ID integer primary key,
+	title varchar(255),
+	Salary varchar(255)
+);
+
+CREATE TABLE Asset (
+	Name varchar primary key, 
+	MemberID integer foreign key references Member(MemberID),
+	Detail varchar(255),
+	Uses varchar(255)
+);
+
+CREATE TABLE Serves_in (
+	RoleID integer,
+	MemberID integer,
+	Start_date varchar(255),
+	End_date varchar(255),
+	
+	primary key(RoleID, MemberID),
+	foreign key(RoleID) references Role(ID),
+	foreign key(MemberID) references Member(MemberID),
+);

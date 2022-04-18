@@ -1,0 +1,50 @@
+ count_no_height 
+-----------------
+           47315
+(1 row)
+
+ name_harrison_or_ford 
+-----------------------
+                    64
+(1 row)
+
+ movies_with_avg_height_190 
+----------------------------
+                      11486
+(1 row)
+
+ movies_with_dublicate_genre_entry 
+-----------------------------------
+                               752
+(1 row)
+
+ actors_in_spielberg_movies 
+----------------------------
+                       2219
+(1 row)
+
+ movies_not_reg_in_involved_1999 
+---------------------------------
+                               7
+(1 row)
+
+ director_and_actor 
+--------------------
+                345
+(1 row)
+
+ director_and_actor_in_roles 
+-----------------------------
+                         250
+(1 row)
+
+ actors_in_all_genres_in_cata_lame 
+-----------------------------------
+                                 1
+(1 row)
+
+ most_referenced_movie 
+-----------------------
+ Star Wars
+(1 row)
+
