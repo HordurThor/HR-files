@@ -104,4 +104,62 @@ select (1.0 *( select count(*) from injections) /
 (select count(*) from people))
 -- 57.4908088235294118
 
+
 -- (g)
+
+select count(*) 
+from (select I.peoID
+    from injections I 
+    join vaccines V on V.id = I.vacID
+    join diseases D on D.id = V.disID
+    join categories C on C.id = D.catID
+    where C.name = 'Immune diseases'
+    group by I.peoID
+    having count(distinct V.disID) = (
+        select count(*)
+        from diseases D
+        join categories C on C.id = D.catID
+        where C.name = 'Immune diseases'
+    )
+) X;
+-- 150
+
+select count(*)
+from (
+select I.peoID
+    from injections I 
+    join vaccines V on V.id = I.vacID
+    join diseases D on D.id = V.disID
+    group by I.peoID
+    having count(distinct D.catID) = (select count(*)
+    from categories)) X;
+-- 450
+
+
+-- (h)
+
+drop view if exists immunedisvacdata;
+create view immunedisvacdata
+as
+select I.peoid, P.birthyear, V.disID, count(distinct I.vacID) as vaccount 
+from injections I
+join vaccines V on V.id = I.vacID
+join people P on P.id = I.peoID
+join diseases D on D.id = V.disID
+join categories C on C.id = D.catID
+where C.name = 'Immune diseases' and D.curable
+group by I.peoid, P.birthyear, V.disID;
+
+select I.peoID 
+from immunedisvacdata I
+where I.birthyear = 
+(select min(I2.birthyear)
+from immunedisvacdata I2
+where I2.vaccount = (
+    select max(I3.vaccount)
+    from immunedisvacdata I3))
+and I.vaccount = (select max(I4.vaccount)
+    from immunedisvacdata I4)
+-- 422
+
+
